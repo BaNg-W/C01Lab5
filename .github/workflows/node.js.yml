@@ -10,17 +10,17 @@ on:
       branches: ["main", "dev"]
 
 jobs:
-build:
+  build:
     name: Backend test
     runs-on: ubuntu-latest
 
     defaults:
-    run:
-        working-directory: ./quirknotes/backend
+      run:
+          working-directory: ./quirknotes/backend
 
     strategy:
-    matrix:
-        node-version: [20.x]
+      matrix:
+          node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v3
